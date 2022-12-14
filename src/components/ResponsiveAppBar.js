@@ -14,6 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import logo from '../images/doggologo.svg';
 
 const doggoLogo = logo;
+const userAltLetter = '';
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -69,11 +70,11 @@ function ResponsiveAppBar() {
             >
               <MenuIcon sx={{
                 color: '#818181',
-                height: '50px',
+                height: '35px',
                 width: '35px',
               }} />
             </IconButton>
-            <Menu
+            {/* <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -96,7 +97,7 @@ function ResponsiveAppBar() {
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
-            </Menu>
+            </Menu> */}
           </Box>
           <Typography
             variant="h5"
@@ -132,7 +133,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt={userAltLetter} src="/static/images/avatar/2.jpg" />
               </IconButton>
             </Tooltip>
             <Menu
